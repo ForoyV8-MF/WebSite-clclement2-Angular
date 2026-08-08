@@ -1,0 +1,28 @@
+@keyframes hoveringUp
+{
+    0% { transform: translateY(-10px); } /* Vers le Haut */
+    50% { transform: translateY(0px); } /* Puis Vers le Bas */
+    100% { transform: translateY(-10px); } /* Puis Vers le Haut */
+}
+
+.hovering-up { animation: hoveringUp 0.6s ease-in-out; }
+
+.logoPlay
+{
+    height: 100px;
+    width: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 890px;
+    margin-right: 200px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset;
+    background-color: transparent;
+    min-height: 10;
+    position: absolute;
+    opacity: 8;
+    animation: hoveringUp 1.1s ease-out infinite;
+}

@@ -1,0 +1,170 @@
+:host
+{
+    /* Some Colors */
+    --spring-clear-green: #D3EEED;
+    --wide-green: #6CACA4;
+    --clear-green: oklch(76.755% 0.10812 141.509);
+    --deep-green: oklch(79.778% 0.26303 143.075 / 0.534);
+    --really-deep-green: #2B564D;
+
+    --pearl-blue: rgb(233, 243, 251);
+    --opale-blue: rgb(223, 237, 249);
+    --sea-blue: rgb(218, 231, 242);
+    --clear-blue: rgb(170, 208, 237);
+    --wide-blue: rgb(103, 171, 222);
+    --deep-blue: rgb(44, 86, 122);
+    --really-deep-blue: rgb(37, 72, 101);
+
+    --zz-orange: rgb(255, 192, 0);
+
+    /* Gradient */
+    --gradient:
+    linear-gradient(90deg, var(--pearl-blue) 50%, var(--sea-blue) 65%,var(--clear-blue) 80%, var(--wide-blue) 99%, var(--deep-blue) 100%);
+}
+
+.main-header /* Sera mis à Jour par l'animation */
+{
+    display: flex; /* Active Flexbox, gap et justify-content */
+    position: relative; /* Position normale au flux de la page */
+    top: 0; /* Collé en haut de la page */
+
+    background: var(--gradient); /* Fond bleu clair */
+
+    gap: 0.5rem; /* Espace FIXE entre contenus enfants */
+    justify-content: space-between; /* Espace DISPONIBLE entre contenus enfants */
+    align-items: center; /* Centre Verticalement */
+    padding: 1rem 1rem 1rem 1rem; /* Espace Interne (Haut Bas Gauche Droite) */
+    margin-bottom: 1rem;
+
+    width: 98.5%; /* Largeur pleine page */
+    min-height: 80px;
+    min-width: 1200px;
+
+    z-index: 1000; /* Premier Plan */
+
+    box-sizing: border-box; /* Inclut padding et border dans le calcul des dimensions */
+    box-shadow: 0 2px 10px black; /* Ombre Légère */
+
+    border-color: var(--zz-orange);
+    border-width: 3.125rem;
+    border-radius: 0.625rem; /* Épaisseur des coins */
+
+    animation: fadeInLoading 0.6s ease-out forwards;
+}
+
+.letf-side
+{
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logoMail, .logoPhone, .logoGitLab, .logoRedirect
+{
+    background-color: transparent;
+
+    align-items: center;
+    vertical-align: middle;
+
+    margin-left: 5px;
+    margin-right: 8px;
+    margin-bottom: 0.3125rem;
+
+    width: auto;
+    height: 20px;
+
+    white-space: nowrap;
+}
+
+.center-side
+{
+    flex: content;
+    text-align: center;
+
+    color: var(--deep-blue); /* Texte en Bleu */
+}
+
+.header-title h1
+{
+    margin: 0 0px; /* Centre le Titre */
+    font-size: 4.0rem;  /* Taille du Titre */
+}
+
+.header-title h2
+{
+    margin: 0 0px; /* Espace Réduit */
+
+    opacity: 0.9; /* Légère Transparence */
+    font-size: 1.4rem; /* Taille de la Police */
+    font-style: oblique;
+}
+
+.nav-link
+{
+    color: var(--deep-blue); /* Lien Vert */
+    user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;
+    /* Désactive le surlignage pour Safari, Chrome, Mozilla et Internet Explorer */
+}
+
+.nav-link:hover
+{
+    color: var(--really-deep-blue); /* Couleur au Survol */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+@keyframes appearing
+{
+    from { opacity: 0; } /* Début Invisible */
+    to { opacity: 1; } /* Fin Visible */
+}
+
+@keyframes disappearing
+{
+    from { opacity: 1; } /* Début Visible */
+    to { opacity: 0; } /* Fin Invisible */
+}
+
+@keyframes fadeInLoading
+{
+    from { opacity: 0; transform: translateY(-20px); } /* Début Invisible */
+    to { opacity: 1; transform: translateY(0px); } /* Fin Visible */
+}
+
+@keyframes fadeIn
+{
+    from { transform: translateY(0px); } /* Début Invisible */
+    to { transform: translateY(-10px); } /* Fin Visible */
+}
+
+@keyframes hoveringUp
+{
+    0% { transform: translateY(-10px); } /* Vers le Haut */
+    50% { transform: translateY(0px); } /* Puis Vers le Bas */
+    100% { transform: translateY(-10px); } /* Puis Vers le Haut */
+}
+
+.appearing { animation: appearing 0.6s ease-out forwards !important;}
+.disappearing { animation: disappearing 0.6s ease-out forwards !important;}
+.fade-In-Loading { animation: fadeInLoading 0.6s ease-out forwards; }
+.fade-In { animation: fadeIn 0.6s ease-out forwards; }
+.hovering-up { animation: hoveringUp 0.6s ease-in-out; }
+
+.custom-notification
+{
+    position: fixed;
+
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    z-index: 9999;
+    padding: 8px 12px;
+
+    box-shadow: 0 2px 5px black;
+    border-radius: 4px;
+
+    animation:  appearing 0.6s ease-out forwards,
+                fadeIn 0.6s ease-out forwards,
+                disappearing 0.6s ease-out forwards 1.8s;
+              /* hovering-up 1.1s ease-in-out infinite, */
+}
+
+.logoHat { text-decoration: none; }

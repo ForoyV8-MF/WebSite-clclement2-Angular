@@ -1,0 +1,36 @@
+<!-- <p>header works!</p> -->
+
+<header class="main-header">
+
+    <div class="left-side">
+
+        <a (click)="copyToClipBoard('verin.clement03@gmail.com', 'Mail Copié !', $event);" class="nav-link" ngSkipHydration>
+            <div class="logoMail">
+                <img src="assets/images/E-Mail.png" class="logoMail"> verin.clement03@gmail.com
+            </div>
+        </a>
+
+        <a (click)="copyToClipBoard('(+33) 06 24 50 20 92', 'Numéro Copié !', $event);" class="nav-link" ngSkipHydration>
+            <div class="logoPhone">
+                <img src="assets/images/Phone.png" class="logoPhone"> (+33) 6 24 50 20 92
+            </div>
+        </a>
+
+        <!-- <a (click)="copyToClipBoard('https://gitlab.isima.fr/clclement2', 'Lien GitLab Copié !', $event);" class="nav-link" ngSkipHydration> -->
+        <a href="https://gitlab.isima.fr/clclement2" target="_blank" rel="noopener noreferrer">
+            <div class="logoGitLab">
+                <img src="assets/images/GitLab.png" class="logoGitLab"> Clément Vérin (@clclement2)
+                <img src="assets/images/Redirect.png" class="logoRedirect">
+            </div>
+        </a>
+
+    </div>
+
+    <div class="center-side">
+        <h1> Vérin Clément </h1>
+        <h2> Maître Feuriste
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener noreferrer" class="logoHat"> 🎩 </a>
+        </h2>
+    </div>
+
+</header>

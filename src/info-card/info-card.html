@@ -1,0 +1,17 @@
+<!-- <p>info-card works!</p> -->
+
+<!-- | safeHtml -->
+
+<div class = "info-card"
+
+    [ngStyle] = "{ 'border' : borderWidth + ' solid ' + borderColor, 'border-radius' : borderRadius, 'padding' : padding }" >
+
+    <h3 class="info-card-title"> {{ title }} </h3>
+
+    <div class = "info-card-content">
+        <div class = "info-card-left" [ngClass]="'font-lucida'" [innerHTML] = "leftContent"> </div>
+        <!-- <div class = "info-card-center" [innerHTML] = "centerContent"> </div> -->
+        <div class = "info-card-right" [ngClass]="'font-lucida'" [innerHTML] = "rightContent"> </div>
+    </div>
+
+</div>

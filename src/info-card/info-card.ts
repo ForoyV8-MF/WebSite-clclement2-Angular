@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { Component, HostListener, Input } from '@angular/core';
 import { ElementRef, Renderer2 } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component
 ({
@@ -20,7 +21,7 @@ export class InfoCard
   @Input() Caption: string = ''; // Légende de l'image
   @Input() ALT: string = ''; // Texte alternatif de l'image
 
-  @Input() Text: string | HTMLElement = ''; // Contenu Textuel
+  @Input() Text: string = ''; // Contenu Textuel
 
   @Input() scrollPosition: number = 0; // Position Verticale du Scrolling nécessaire pour Apparition
 
@@ -30,7 +31,7 @@ export class InfoCard
   {
     const cardElement = this.el.nativeElement.querySelector('.info-card')
 
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
 
     if(window.scrollY > this.scrollPosition)
       this.renderer.addClass(cardElement, 'fade-In-Loading')

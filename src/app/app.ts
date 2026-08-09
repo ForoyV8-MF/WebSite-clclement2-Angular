@@ -1,5 +1,5 @@
 import { Component, signal, HostListener, Inject, PLATFORM_ID, AfterViewInit, ElementRef } from '@angular/core';
-import { isPlatformBrowser, CommonModule, NgStyle } from '@angular/common';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "../header/header";
 import { InfoCard } from "../info-card/info-card";
@@ -24,10 +24,7 @@ export class App
   { this.isBrowser = isPlatformBrowser(this.platformId); }
 
     ngOnInit()
-    {
-      console.log("AppComponent initialisé côté :", isPlatformBrowser(this.platformId) ? "navigateur" : "serveur");
-      // window.scrollTo(0, 0);
-    }
+    { console.log("AppComponent initialisé côté :", isPlatformBrowser(this.platformId) ? "navigateur" : "serveur"); }
 
     @HostListener('window:scroll') onWindowWheel()
     {

@@ -1,8 +1,6 @@
-import { CommonModule, NgStyle } from '@angular/common'
+import { CommonModule } from '@angular/common'
 import { Component, HostListener, Input } from '@angular/core';
-import { Pipe, PipeTransform, ElementRef, Renderer2 } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { create } from 'domain';
+import { ElementRef, Renderer2 } from '@angular/core';
 
 @Component
 ({
@@ -14,32 +12,27 @@ import { create } from 'domain';
 
 export class InfoCard
 {
-//   constructor(private el : ElementRef, private renderer : Renderer2) {}
+  constructor(private el : ElementRef, private renderer : Renderer2) {}
 
-//   @Input() title: string = ''; // Titre
+  @Input() title: string = ''; // Titre
 
-//   @Input() leftContent: string | HTMLElement = ''; // Left Side
-//   // @Input() centerContent: string | HTMLElement = ''; // Center Side
-//   @Input() rightContent: string | HTMLElement = ''; // Right Side
+  @Input() ImagePath: string = ''; // Chemin de l'image
+  @Input() Caption: string = ''; // Légende de l'image
+  @Input() ALT: string = ''; // Texte alternatif de l'image
 
-//   @Input() borderColor: string = 'var(--wide-green)'; // Couleur Bordure
-//   @Input() borderWidth: string = '1px'; // Épaisseur
-//   @Input() borderRadius: string = '8px'; // Rayon des Coing
-//   // @Input() backGroundColor: string = 'var(--gradient)' // Couleur du Fond
+  @Input() Text: string | HTMLElement = ''; // Contenu Textuel
 
-//   @Input() scrollPosition: number = 0; // Position verticale du scroll pour que la carte apparaisse
+  @Input() scrollPosition: number = 0; // Position Verticale du Scrolling nécessaire pour Apparition
 
-//   @Input() padding: string = '1rem'; // Espacement Interne
+  @HostListener('window:scroll') onWindowWheel() { this.ScrollAnimation(); }
 
-//   @HostListener('window:scroll') onWindowWheel() { this.ScrollAnimation(); }
+  private ScrollAnimation()
+  {
+    const cardElement = this.el.nativeElement.querySelector('.info-card')
 
-//   private ScrollAnimation()
-//   {
-//     const cardElement = this.el.nativeElement.querySelector('.info-card')
+    console.log(window.scrollY);
 
-//     console.log(window.scrollY);
-
-//     if(window.scrollY > this.scrollPosition)
-//       this.renderer.addClass(cardElement, 'fade-In-Loading')
-//   }
+    if(window.scrollY > this.scrollPosition)
+      this.renderer.addClass(cardElement, 'fade-In-Loading')
+  }
 }

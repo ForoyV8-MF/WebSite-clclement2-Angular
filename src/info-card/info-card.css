@@ -74,7 +74,7 @@
     /* transition: opacity 0.3s ease, transform 0.3s ease; */
 }
 
-.info-card-template-banner /* Dimensions et caractéristiques de la bannière Info-card */
+.info-card-banner /* Dimensions et caractéristiques de la bannière Info-card */
 {
     flex: 0 0; /* Ne peut pas grandir, ni rétrécir */
 
@@ -97,7 +97,7 @@
 
 .info-card-title
 {
-    color : var(--really-deep-blue);
+    color : white;
 
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 900;
@@ -133,7 +133,7 @@
     box-sizing: border-box;
 }
 
-.info-card-template-text-format
+.info-card-text-format
 {
     width: 69%; /* Promis c'est pas fait éxprès */
 
@@ -147,7 +147,7 @@
     word-wrap: break-word;
 }
 
-.info-card-template-image-format
+.info-card-image-format
 {
     max-width: 35rem;
     max-height: 43rem;
@@ -166,7 +166,7 @@
         box-sizing: border-box;
     }
 
-    .info-card-template-text-format
+    .info-card-text-format
     {
         width: 99%; /* Promis c'est pas fait éxprès */
 
@@ -180,7 +180,7 @@
         word-wrap: break-word;
     }
 
-    .info-card-template-image-format
+    .info-card-image-format
     {
         max-width: 25rem;
         max-height: 33rem;

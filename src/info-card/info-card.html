@@ -2,46 +2,25 @@
 
 <!-- | safeHtml -->
 
-<!-- <div class="info-card"
-
-    [ngStyle]="{ 'border' : borderWidth + ' solid ' + borderColor, 'border-radius' : borderRadius, 'padding' : padding }" >
-
-    <h3 class="info-card-title"> {{ title }} </h3>
-
-    <div class="info-card-content">
-        <div class="info-card-left" [ngClass]="'font-lucida'" [innerHTML] = "leftContent"> </div>
-        <!-- <div class="info-card-center" [innerHTML] = "centerContent"> </div> -->
-        <!-- <div class="info-card-right" [ngClass]="'font-lucida'" [innerHTML] = "rightContent"> </div>
-    </div>
-
-</div> -->
-
 <div class="info-card">
 
     <div class="info-card-content">
         <div class="info-card-banner">
-            <div class="info-card-title"> <div>Échange Semestriel ERASMUS (Février - Juin 2025)</div> </div>
+            <div class="info-card-title"> <div>{{title}}</div> </div>
         </div>
     </div>
 
-    <div class="info-card-content-wrapper" style="align-items: center; flex-direction: column;">
-
-        <div class="info-card-text-format">
-            J'ai eu l'opportunité d'effectuer un échange semestriel ERASMUS à l'Université de Bradford, dans le West Yorkshire en Angleterre, afin d'accomplir mon quitus international.
-            <p>Cela comprenait des enseignements en Multi-Threading, Systèmes Conurrentiels et Distribués, UI/UX Design, ainsi qu'en Interprétation de Données.</p>
-
-            <p>Les langages associés ont principalement été JAVA avec ses modules Swing et Lockers, Python pour le calcul et les visualisations, et Weka pour la construction et la cartographie de réseaux de neuronnes.</p>
-            <p>J'ai notamment pu décrire le comportement global de la météo annuelle sur Mars, imiter le système de commande et service d'un restauraunt, implémenter un système d'authentification multi-facteurs et d'approuver quelques symptômes rétiniens du diabète.</p>
-            <p>Le campus étant traversé par un jeu de nationalités large, l'adaptation à la culture Anglaise fût agréable aux cotés de personnalités qui décrouvraient comme moi ce pays.</p>
-            <p>J'ai pu en profiter pour visister les villes voisines Leeds et Manchester ainsi que quelques parcs nationaux ! </p>
-        </div>
+    <div class="info-card-content-wrapper" style="align-items: center;">
 
         <div>
-            <img class="info-card-image-format" src="./assets/images/Bradford_Center.png" alt="BRADFORD">
-            <figcaption>Bradford City Center, West Yorkshire</figcaption>
+            <img class="info-card-image-format" src="{{ ImagePath }}" alt="{{ ALT }}">
+            <figcaption>{{ Caption }}</figcaption>
+        </div>
+
+        <div class="info-card-text-format">
+            [innerHTML]="Text | safeHtml"
         </div>
 
     </div>
 
 </div>
-

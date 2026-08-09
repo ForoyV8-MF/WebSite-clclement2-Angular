@@ -7,8 +7,8 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<main class="main">
-  <!-- <div class="content">
+<!-- <main class="main">
+  <div class="content">
     <div class="left-side">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,9 @@
         </a>
       </div>
     </div>
-  </div> -->
+  </div>
+
+</main> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -162,26 +164,33 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-</main>
-
   <app-header> </app-header>
 
   <a (click)="showFirstCard()"> 
     <app-play-button> </app-play-button>
   </a>
 
-  <app-info-card> </app-info-card>
-   
-    <!-- <app-info-card
-      title = "Séjour académique ERASMUS - Université de Bradford - Janvier à Juin 2025"
-      [leftContent] = "'<img src = \'assets/images/Bradford_Center.png\' class=\'photo\'>'"
-      [rightContent] = 
-      "'J\'ai eu la chance d\'éffectuer un échange semestriel à Bradford en Angleterre dans le cadre de mon quitus International.
-      Cette éxperience a complété  ' " 
-      [scrollPosition] = 1
-      > </app-info-card>
-
     <app-info-card
+      title = "Séjour académique ERASMUS - Université de Bradford - Janvier à Juin 2025"
+
+      ImagePath = "../assets/images/Bradford_Center.png"
+
+      Caption="Bradford City Center, West Yorkshire"
+      ALT="BRADFORD"
+
+      Text =
+            "J'ai eu l'opportunité d'effectuer un échange semestriel ERASMUS à l'Université de Bradford, dans le West Yorkshire en Angleterre, afin d'accomplir mon quitus international.
+            <p>Cela comprenait des enseignements en Multi-Threading, Systèmes Concurrentiels et Distribués, UI/UX Design, ainsi qu'en Interprétation de Données.</p>
+
+            <p>Les langages associés ont principalement été JAVA avec ses modules Swing et Lockers, Python pour le calcul et les visualisations, et Weka pour la construction et la cartographie de réseaux de neuronnes.</p>
+            <p>J'ai notamment pu décrire le comportement global de la météo annuelle sur Mars, imiter le système de commande et service d'un restaurant, implémenter un système d'authentification multi-facteurs et d'approuver quelques symptômes rétiniens du diabète.</p>
+            <p>Le campus étant traversé par un jeu de nationalités large, l'adaptation à la culture Anglaise fût agréable aux cotés de personnalités qui décrouvraient comme moi ce pays.</p>
+            <p>J'ai pu en profiter pour visiter les villes voisines Leeds et Manchester ainsi que quelques parcs nationaux ! </p>"
+
+      [scrollPosition] = 1
+    > </app-info-card>
+
+    <!-- <app-info-card
       title = "Étudiant à l'ISIMA - Diplôme d'Ingénieur - 2023 / 2027"
       [leftContent] = "'J\'ai effectué le DI d\'ISIMA'"
       [rightContent] = "'<img src = \'assets/images/Isima.png\' class=\'photo\'>'"

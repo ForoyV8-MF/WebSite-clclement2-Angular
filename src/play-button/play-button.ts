@@ -1,5 +1,5 @@
-import { Component, HostListener, ElementRef, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component
 ({

@@ -7,7 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<!-- <main class="main">
+<main class="main">
   <div class="content">
     <div class="left-side">
       <svg
@@ -152,9 +152,6 @@
         </a>
       </div>
     </div>
-  </div>
-
-</main> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -164,11 +161,9 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-  <app-header> </app-header>
+  <app-header>  </app-header>
 
-  <a (click)="showFirstCard()"> 
-    <app-play-button> </app-play-button>
-  </a>
+  <app-play-button> </app-play-button>
 
   <app-info-card
     title = "Séjour académique ERASMUS - Université de Bradford - Janvier à Juin 2025"
@@ -241,7 +236,7 @@
 
             Cette formation m'a permis de concourir au groupe INP auquel je ferai parti par la suite.
             
-            /Je ne vous crois pas monsieur 🗿️ (Moi à mon professeur de Maths) 🫠️"
+            Je ne vous crois pas monsieur 🗿️ (Moi à mon professeur de Maths) 🫠️"
 
     [scrollPosition] = 600
 
@@ -268,19 +263,21 @@
 
     [scrollPosition] = 920
   >
+
     <div class="logo-link">
         Description du projet (MCOT)
 
-        <a href="Exemple_PresentationMCOT.pdf">
-            <img src="Exemple_PresentationRedirect.png" class="logo-link">
+        <a href="assets/images/MCOT.pdf">
+            <img src="assets/images/Redirect.png" class="logoRedirect">
         </a>
     </div>
+
   </app-info-card>
 
   <app-info-card
     title = "Joueur de Piano (Depuis Avril 2023)"
 
-    ImagePath = "/assets/images/Roland_FP30X.jpg"
+    ImagePath = "/assets/images/Roland_FP30X.jpeg"
 
     Caption="Mon Roland FP_30X 🥹️"
     ALT="PIANO"
@@ -299,6 +296,10 @@
     [scrollPosition] = 1000
 
   > </app-info-card>
+
+  </div>
+</main>
+
 
 <router-outlet> </router-outlet>
 

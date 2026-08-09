@@ -38,12 +38,12 @@
 
     overflow: hidden; /* Masque le contenu qui dépasse du template */
 
-    width: 98.5%; /* Largeur pleine page */
+    width: 100%; /* Largeur pleine page */
 
     z-index: 1000; /* Premier Plan */
 
     box-sizing: border-box; /* Inclut padding et border dans le calcul des dimensions */
-    box-shadow: 0 2px 10px black; /* Ombre Légère */
+    box-shadow: 0.2rem 0.4rem 0.625rem black; /* Ombre Légère de Surélèvement (Horizontal, Vertical, Flou) */
 
     border-color: var(--zz-orange);
     border-width: 3.125rem;
@@ -53,13 +53,9 @@
 }
 
 .letf-side
-{
-    text-align: left;
-    flex-direction: column;
-    flex-shrink: 0;
-}
+{ text-align: left; }
 
-.logoMail, .logoPhone, .logoGitLab, .logoRedirect
+.logoRedirect, .logoMail, .logoPhone, .logoGitLab, .logoGitHub, .logoCV
 {
     background-color: transparent;
 
@@ -84,10 +80,10 @@
     color: var(--deep-blue); /* Texte en Bleu */
 }
 
-.header-title h1
+h1
 {
-    margin: 0 0px; /* Centre le Titre */
-    font-size: 4.0rem;  /* Taille du Titre */
+    margin: auto; /* Centre le Titre */
+    font-size: 4rem;  /* Taille du Titre */
 }
 
 @media (max-width: 980px) /* Pour les écrans type mobile */
@@ -99,17 +95,27 @@
     }
 }
 
-.header-title h2
+h2
 {
-    margin: 0 0px; /* Espace Réduit */
+    margin: auto; /* Espace Réduit */
 
     opacity: 0.9; /* Légère Transparence */
     font-size: 1.4rem; /* Taille de la Police */
     font-style: oblique;
 }
 
+h3
+{
+    margin: auto; /* Marges Automatiques */
+    font-size: 1.4rem; /* Taille de la Police */
+    font-style: oblique;
+    font-weight: 100;
+}
+
 .nav-link
 {
+    width: 100%;
+
     color: var(--deep-blue); /* Lien Vert */
     user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;
     /* Désactive le surlignage pour Safari, Chrome, Mozilla et Internet Explorer */
@@ -120,6 +126,9 @@
     color: var(--really-deep-blue); /* Couleur au Survol */
     text-decoration: underline; /* Soulignement au survol */
 }
+
+.right-side
+{ text-align: right; }
 
 a { text-decoration: none; }
 
@@ -137,21 +146,21 @@ a { text-decoration: none; }
 
 @keyframes fadeInLoading
 {
-    from { opacity: 0; transform: translateY(-20px); } /* Début Invisible */
-    to { opacity: 1; transform: translateY(0px); } /* Fin Visible */
+    from { opacity: 0; transform: translateY(-1.25rem); } /* Début Invisible */
+    to { opacity: 1; transform: translateY(0rem); } /* Fin Visible */
 }
 
 @keyframes fadeIn
 {
-    from { transform: translateY(0px); } /* Début Invisible */
-    to { transform: translateY(-10px); } /* Fin Visible */
+    from { transform: translateY(0rem); } /* Début Invisible */
+    to { transform: translateY(-0.625rem); } /* Fin Visible */
 }
 
 @keyframes hoveringUp
 {
-    0% { transform: translateY(-10px); } /* Vers le Haut */
+    0% { transform: translateY(-0.625rem); } /* Vers le Haut */
     50% { transform: translateY(0px); } /* Puis Vers le Bas */
-    100% { transform: translateY(-10px); } /* Puis Vers le Haut */
+    100% { transform: translateY(-0.625rem); } /* Puis Vers le Haut */
 }
 
 .appearing { animation: appearing 0.6s ease-out forwards !important;}
@@ -168,9 +177,9 @@ a { text-decoration: none; }
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     z-index: 9999;
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
 
-    box-shadow: 0 2px 5px black;
+    box-shadow: 0 0.125rem 0.3125rem black;
     border-radius: 4px;
 
     animation:  appearing 0.6s ease-out forwards,

@@ -36,9 +36,9 @@
     padding: 1rem 1rem 1rem 1rem; /* Espace Interne (Haut Bas Gauche Droite) */
     margin-bottom: 1rem;
 
+    overflow: hidden; /* Masque le contenu qui dépasse du template */
+
     width: 98.5%; /* Largeur pleine page */
-    min-height: 80px;
-    min-width: 1200px;
 
     z-index: 1000; /* Premier Plan */
 
@@ -54,6 +54,7 @@
 
 .letf-side
 {
+    text-align: left;
     flex-direction: column;
     flex-shrink: 0;
 }
@@ -65,12 +66,12 @@
     align-items: center;
     vertical-align: middle;
 
-    margin-left: 5px;
-    margin-right: 8px;
+    margin-left: 0.3125rem;
+    margin-right: 0.5rem;
     margin-bottom: 0.3125rem;
 
     width: auto;
-    height: 20px;
+    height: 1.25rem;
 
     white-space: nowrap;
 }
@@ -87,6 +88,15 @@
 {
     margin: 0 0px; /* Centre le Titre */
     font-size: 4.0rem;  /* Taille du Titre */
+}
+
+@media (max-width: 980px) /* Pour les écrans type mobile */
+{
+    h1
+    {
+        margin: auto; /* Marges Automatiques */
+        font-size: 2.8rem;  /* Taille du Titre */
+    }
 }
 
 .header-title h2
@@ -110,6 +120,8 @@
     color: var(--really-deep-blue); /* Couleur au Survol */
     text-decoration: underline; /* Soulignement au survol */
 }
+
+a { text-decoration: none; }
 
 @keyframes appearing
 {

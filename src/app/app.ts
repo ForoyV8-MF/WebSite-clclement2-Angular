@@ -26,7 +26,7 @@ export class App
     ngOnInit()
     {
       console.log("AppComponent initialisé côté :", isPlatformBrowser(this.platformId) ? "navigateur" : "serveur");
-      window.scrollTo(0, 0);
+      // window.scrollTo(0, 0);
     }
 
     @HostListener('window:scroll') onWindowWheel()

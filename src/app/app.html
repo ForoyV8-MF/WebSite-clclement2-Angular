@@ -154,15 +154,25 @@
     </div>
   </div> -->
 
-  <div class="bg">
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-    <app-header ngSkipHydration> </app-header>
+</main>
 
-    <a (click)="showFirstCard()"> 
-      <app-play-button> </app-play-button>
-    </a>
+  <app-header> </app-header>
+
+  <a (click)="showFirstCard()"> 
+    <app-play-button> </app-play-button>
+  </a>
+
+  <app-info-card> </app-info-card>
    
-    <app-info-card
+    <!-- <app-info-card
       title = "Séjour académique ERASMUS - Université de Bradford - Janvier à Juin 2025"
       [leftContent] = "'<img src = \'assets/images/Bradford_Center.png\' class=\'photo\'>'"
       [rightContent] = 
@@ -183,20 +193,8 @@
       [leftContent] = "'<img src = \'assets/images/Balzac.jpg\' class=\'photo\'>'"
       [rightContent] = "'J\'ai eu la chance d\'effectuer un échange semestriel à Bradford en Angleterre'"
       [scrollPosition] = 680
-    > </app-info-card>
+    > </app-info-card> -->
 
     <router-outlet> </router-outlet>
-
-  </div>
-
-</main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <!-- /* It's dangerous to go alone. Take this : 4<4 */ -->

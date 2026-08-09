@@ -73,9 +73,8 @@ main
     min-height: 100%;
     display: flex;
     justify-content: space-around;
-    /* align-items: end; */
     padding: 1rem;
-    box-sizing: border-box;
+    box-sizing: inherit;
     position: relative;
 }
 
@@ -86,7 +85,6 @@ main
 
 .content
 {
-    display: flex;
     position: relative;
 
     justify-content: space-between;
@@ -96,7 +94,7 @@ main
     overflow: hidden; /* Masque le contenu qui dépasse du template */
 
     width: 100%;
-    max-width: 700px;
+    /* max-width: 700px; */
 }
 
 .content h1

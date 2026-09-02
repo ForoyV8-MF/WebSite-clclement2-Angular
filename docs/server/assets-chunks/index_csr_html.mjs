@@ -9,6 +9,6 @@ export default `<!doctype html>
 <link rel="stylesheet" href="styles-VBYOOSCD.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-VBYOOSCD.css"></noscript></head>
 <body ngcm="">
   <app-root></app-root>
-<script src="main-TRRNBRRD.js" type="module"></script></body>
+<script src="main-YEAZTPUP.js" type="module"></script></body>
 </html>
 `;
